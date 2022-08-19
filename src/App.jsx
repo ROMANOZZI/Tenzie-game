@@ -7,7 +7,7 @@ import Rollbtn from '../components/Rollbtn'
 import Confetti from 'react-confetti'
 function App() {
   
-  const randomize=()=>Math.floor(Math.random()*5)+1;
+  const randomize=()=>Math.floor(Math.random()*6)+1;
   const nums=[1,2,3,4,5,6,7,8,9,10];
   const elements= nums.map(x=>({id:x,value:randomize(),freeze:false}));
   const [list,setList]=React.useState(elements);
