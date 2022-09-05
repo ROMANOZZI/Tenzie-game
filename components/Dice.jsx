@@ -9,10 +9,12 @@ import Dice6 from '../Dice-6-b.svg'
 
 export default function Dice(props){
     const Dice=[Dice1,Dice2,Dice3,Dice4,Dice5,Dice6]
-   
-    const numsArr=props.list.map(x=>(<div key={x.id}  className={`num  ${x.freeze? "freezed":""}`} onClick={(event)=>props.toggler(event,x.id)}>
-      <img className='Dice-face' src={Dice[x.value]}></img>
-        </div>))
+    
+    const numsArr=props.list.map(x=>{
+      
+      return(<div key={x.id}  className={`num  ${x.freeze? "freezed":""}`} onClick={(event)=>props.toggler(event,x.id)}>
+      <img className='Dice-face' src={Dice[x.value-1]}></img>
+        </div>)})
 
    return(
     <div className="dice--container">
